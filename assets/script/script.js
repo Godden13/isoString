@@ -11,7 +11,7 @@ btn.addEventListener('click', () => {
   }
 })
 
-function isoString() {
+function isoString () {
   const map = new Map()
   const set = new Set()
   let string1 = firstInputItem.value
