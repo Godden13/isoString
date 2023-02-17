@@ -1,17 +1,17 @@
-const firstInputItem = document.getElementById("word1");
-const secondInputItem = document.getElementById("word2");
-const display = document.getElementById("display");
-const btn = document.getElementById("btn");
+const firstInputItem = document.getElementById('word1')
+const secondInputItem = document.getElementById('word2')
+const display = document.getElementById('display')
+const btn = document.getElementById('btn')
 
 btn.addEventListener('click', () => {
   if (firstInputItem.value === '' || secondInputItem.value === '') {
-    display.innerHTML = ('please input a string')
+    display.innerHTML = 'please input a string'
   } else {
-    return (display.innerHTML = isomorphicStrings())
+    return (display.innerHTML = isoString())
   }
 })
 
-function isomorphicStrings() {
+function isoString () {
   const map = new Map()
   const set = new Set()
   let string1 = firstInputItem.value
@@ -19,7 +19,8 @@ function isomorphicStrings() {
   string1 = string1.toLowerCase()
   string2 = string2.toLowerCase()
   if (string1.length !== string2.length) {
-    return (display.innerHTML = 'please input strings of the same length.\n' + 'can never be isomorphic')
+    return (display.innerHTML =
+      'please input strings of the same length.\n' + 'can never be isomorphic')
   }
 
   for (let i = 0; i < string1.length; i++) {
